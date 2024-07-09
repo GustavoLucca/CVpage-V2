@@ -1,5 +1,5 @@
 export const CustomLink1 = ({href, display_text}) => (
-    <div className="child">
+    <div className="child w3-margin-top w3-margin-bottom">
         <a href = {`${href}`}
            target="_blank">
             <div className="w3-container w3-card w3-white child1">
