@@ -8,16 +8,6 @@ import {Card} from "@/components/Card";
 const Projects = () => {
     return (
         <>
-            <Head>
-                <title>W3.CSS Template</title>
-                <meta charSet="UTF-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-                <link rel="stylesheet" href="/styles/globals.css"/>
-            </Head>
-            <Layout>
                 <div className="w3-light-grey">
                     <div className="w3-content w3-margin-top" style={{maxWidth: '1400px'}}>
                         <div className="w3-row-padding">
@@ -46,7 +36,6 @@ const Projects = () => {
                         </div>
                     </div>
                 </div>
-            </Layout>
         </>
     );
 };

@@ -2,7 +2,7 @@ export const CustomLink = ({display_text}) => (
     <span
         style={{
         backgroundColor: '#009688',
-        fontSize: '15px',
+        fontSize: '20px',
         border: 'none',
         color: 'white',
         cursor: 'pointer'
