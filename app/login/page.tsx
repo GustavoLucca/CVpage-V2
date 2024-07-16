@@ -1,36 +1,39 @@
+// app/login/page.tsx
 'use client';
 
 import { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useRouter } from 'next/navigation';
+import {useAuth} from "@/hooks/useAuth";
 
-const Login = () => {
+const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const router = useRouter();
     const { login } = useAuth();
 
-    const handleSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
         await login(email, password);
+        router.push('/');
     };
 
     return (
-        <div>
-            <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                </label>
-                <br />
-                <label>
-                    Password:
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                </label>
-                <br />
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+            />
+            <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+            />
+            <button type="submit">Login</button>
+        </form>
     );
 };
 
-export default Login;
+export default LoginPage;

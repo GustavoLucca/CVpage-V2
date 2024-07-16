@@ -1,22 +1,21 @@
+// Example in an API route file, e.g., pages/api/login.ts
 import { NextApiRequest, NextApiResponse } from 'next';
-import { openDb } from '../../utils/db';
+import prisma from '/utils/db.ts';
 
-export default async function loginHandler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ message: 'Method Not Allowed' });
-    }
-
+export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { email, password } = req.body;
 
-    // Open a connection to the SQLite database
-    const db = await openDb();
+    if (req.method === 'POST') {
+        const user = await prisma.user.findUnique({
+            where: { email },
+        });
 
-    // Check if the user exists and the password matches
-    const user = await db.get('SELECT * FROM users WHERE email = ? AND password = ?', email, password);
-
-    if (user) {
-        return res.status(200).json({ message: 'Login successful', user });
+        if (user && user.password === password) {
+            res.status(200).json({ message: 'Login successful' });
+        } else {
+            res.status(401).json({ message: 'Invalid credentials' });
+        }
     } else {
-        return res.status(401).json({ message: 'Invalid credentials' });
+        res.status(405).json({ message: 'Method not allowed' });
     }
-}
+};
