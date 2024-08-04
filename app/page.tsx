@@ -36,7 +36,7 @@ const Home = () => {
                                             Hello! My name is Gustavo Lucca, and I am a highly motivated third-year SLU student currently studying Computer Science with a minor in Entrepreneurship and Philosophy. I am passionate about computer science and all the areas this field encompasses, such as Artificial Intelligence and machine learning, to mention a few. At SLU, I have taken a number of CS courses related to Object-Oriented Programming and Data Structures which have led to a proficiency in C++, Java and Python. My favorite class so far has been World Wide Web, where we applied concepts from discrete math, such as graph theory, to the web.
                                             <br/>
                                             <br/>
-                                            At SLU, I am currently maintaining a 3.80 GPA, as well as gratefully receiving a Vice President tuition scholarship and a Magis Award. I am from Puerto Rico, and I completed my High school studies there at the University of Puerto Rico's High School, where I graduated magna cum laude. I am fluent in English and Spanish. I look forward to working with you.
+                                            At SLU, I am currently maintaining a 3.80 GPA, as well as gratefully receiving a Vice President tuition scholarship and a Magis Award. I am from Puerto Rico, and I completed my High school studies there at the University of Puerto Rico&apos;s High School, where I graduated magna cum laude. I am fluent in English and Spanish. I look forward to working with you.
                                         </p>
                                     </div>
                                 </Card>
