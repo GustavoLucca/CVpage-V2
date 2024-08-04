@@ -17,7 +17,7 @@ const Education = () => {
                                         <h5 className="w3-opacity"><b>Saint Louis University</b></h5>
                                         <h6 className="w3-text-teal"><i
                                             className="fa fa-calendar fa-fw w3-margin-right"></i>2022-2026</h6>
-                                        <p>Bachelor's degree in Computer Science, with minors in Entrepreneurship and
+                                        <p>Bachelor&apos;s degree in Computer Science, with minors in Entrepreneurship and
                                             Philosophy.</p>
                                     </div>
                                     <div className="w3-container">
