@@ -19,13 +19,13 @@ const Home = () => {
                                     <Card title="Gustavo Lucca" icon="fa fa-server">
                                     <div className="w3-container w3-margin-bottom">
                                         <p><b><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Computer Science Student</b></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eu turpis eu rutrum. In mattis quam ac maximus bibendum. Aenean quis turpis cursus mi congue ultricies. Donec laoreet varius nulla, et imperdiet libero feugiat non.</p>
+                                        <p>I decided to study Computer Science after developing a passion for coding in my High School CS class. After this, I decided to pursue a bachelors degree in Computer Science at Saint Louis University, where I have engaged in multiple projects related to Computer Science to develop my skills.</p>
                                         <p><b><i className="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>San Juan, Puerto Rico</b></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eu turpis eu rutrum. In mattis quam ac maximus bibendum. Aenean quis turpis cursus mi congue ultricies. Donec laoreet varius nulla, et imperdiet libero feugiat non.</p>
+                                        <p>I was born and raised within a bilingual environment in Puerto Rico, where I studied until I graduated high school at 18. </p>
                                         <p><b><i className="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>gustavo.lucca@slu.edu</b></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eu turpis eu rutrum. In mattis quam ac maximus bibendum. Aenean quis turpis cursus mi congue ultricies. Donec laoreet varius nulla, et imperdiet libero feugiat non.</p>
+                                        <p>Feel free to contact me at the email above for any work, collaboration or academic opportunities.</p>
                                         <p><b><i className="fa fa-university fa-fw w3-margin-right w3-large w3-text-teal"></i>Saint Louis University</b></p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eu turpis eu rutrum. In mattis quam ac maximus bibendum. Aenean quis turpis cursus mi congue ultricies. Donec laoreet varius nulla, et imperdiet libero feugiat non.</p>
+                                        <p>Currently pursuing a Computer Science Bachelors degree with minors in Philosophy and Entrepreneurship at Saint Louis University.</p>
                                     </div>
                                     </Card>
                             </div>

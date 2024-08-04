@@ -2,28 +2,10 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 import './globals.css';
 import Footer from './Footer';
-import AuthWrapper from "@/components/AuthWrapper";
-import { AuthProvider, useAuth } from '@/hooks/useAuth';
 
 interface LayoutProps {
     children: ReactNode;
 }
-
-const AuthButtons = () => {
-    const { isAuthenticated, logout } = useAuth();
-
-    return (
-        <div className="right">
-            {isAuthenticated ? (
-                <button onClick={logout}>Logout</button>
-            ) : (
-                <Link href="/app/login/page.tsx">
-                    <a className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Log In</a>
-                </Link>
-            )}
-        </div>
-    );
-};
 
 const Layout = ({ children }: LayoutProps) => {
     return (
@@ -36,22 +18,26 @@ const Layout = ({ children }: LayoutProps) => {
             <link rel="stylesheet" href="/styles/globals.css" />
         </head>
         <body>
-        <AuthWrapper>
+        <div className="flex-container">
             <header>
                 <nav>
                     <Link href="/" className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Home</Link>
-                    <Link href="/Education" className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Education & Skills</Link>
-                    <Link href="/Projects" className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Projects</Link>
-                    <Link href="/Contact" className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Contact</Link>
-                    <AuthButtons />
+                    <Link href="/Education" className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Education
+                        & Skills</Link>
+                    <Link href="/Projects"
+                          className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Projects</Link>
+                    <Link href="/Contact"
+                          className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Contact</Link>
                 </nav>
             </header>
-            {children}
-            <Footer />
-        </AuthWrapper>
+            <main className="flex-main">
+                {children}
+            </main>
+                <Footer/>
+        </div>
         </body>
         </html>
-    );
+);
 };
 
 export default Layout;

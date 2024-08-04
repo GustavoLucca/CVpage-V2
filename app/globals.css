@@ -11,6 +11,21 @@ html, body {
   flex-direction: column;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  flex: 0 0 auto; /* Header doesn't grow or shrink */
+}
+
+.flex-main {
+  flex: 1 0 auto; /* Main content grows and shrinks as needed */
+  padding: 1rem; /* Optional: add some padding to your main content */
+}
+
 .layout-container {
   display: flex;
   flex-direction: column;
@@ -64,6 +79,7 @@ header nav a:hover {
 footer {
   margin-top: 20px;
   text-align: center;
+  flex: 0 0 auto;
 }
 
 .content {

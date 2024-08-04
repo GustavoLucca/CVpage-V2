@@ -1,8 +1,8 @@
-import Layout from "@/app/layout";
-import Head from "next/head";
-import {CustomLink1} from "@/components/CustomLink1";
+
 import {Card} from "@/components/Card";
 import {LBubble} from "@/components/LBubble";
+import {CustomLink3} from "@/components/CustomLink3";
+import {CustomLink4} from "@/components/CustomLink4";
 
 
 const Education = () => {
@@ -30,12 +30,12 @@ const Education = () => {
                                 </Card>
 
                                 <div className="parent">
-                                    <CustomLink1
+                                    <CustomLink4
                                         href={"https://www.linkedin.com/in/gustavo-lucca-padilla-0a545a2a6/details/certifications/1635554289416/single-media-viewer/?profileId=ACoAAEm_6P0B4uaoz9zXTYJk9jssf1ofAmP8eGc"}
-                                        display_text="Excel Certification"></CustomLink1>
-                                    <CustomLink1
+                                        display_text="Excel Certification"></CustomLink4>
+                                    <CustomLink3
                                         href={"https://www.linkedin.com/in/gustavo-lucca-padilla-0a545a2a6/details/certifications/1635554286627/single-media-viewer/?profileId=ACoAAEm_6P0B4uaoz9zXTYJk9jssf1ofAmP8eGc"}
-                                        display_text="Database Certification"></CustomLink1>
+                                        display_text="Database Certification"></CustomLink3>
                                 </div>
 
                             </div>
