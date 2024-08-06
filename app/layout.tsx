@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 import './globals.css';
 import Footer from './Footer';
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
 interface LayoutProps {
     children: ReactNode;
@@ -10,6 +11,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
     return (
         <html lang="en">
+        <UserProvider>
         <head>
             <title>Digital CV</title>
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -28,6 +30,8 @@ const Layout = ({ children }: LayoutProps) => {
                           className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Projects</Link>
                     <Link href="/Contact"
                           className="w3-bar-item w3-button w3-hover-none w3-hover-text-blue">Contact</Link>
+                    <a href="/api/auth/login">Login</a>
+                    <a href="/api/auth/logout">Logout</a>
                 </nav>
             </header>
             <main className="flex-main">
@@ -36,6 +40,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <Footer/>
         </div>
         </body>
+        </UserProvider>
         </html>
 );
 };
